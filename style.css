@@ -3,11 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 :root {
-    --title-color: #ffce54;
-    --bg-color: #42b5a6;
-    --text-color: white;
+    --title-color: #66fcf1;
+    --bg-color: #0b0c10;
+    --text-color: #45a29e;
 }
 
 body {
@@ -24,9 +27,6 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--title-color);
-    user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
 }
 
 .desc {
@@ -35,6 +35,7 @@ body {
     text-align: center;
     font-style: italic;
     font-size: 1.2rem;
+    color: #c5c6c7;
 }
 
 .list {
@@ -83,9 +84,9 @@ body {
 }
 
 /* media query for iphone */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     html {
-        font-size: 10px;
+        font-size: 12px;
     }
     .title {
         font-size: 3rem;
