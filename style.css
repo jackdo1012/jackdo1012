@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 :root {
     --title-color: #66fcf1;
@@ -24,9 +27,6 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--title-color);
-    user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
 }
 
 .desc {
