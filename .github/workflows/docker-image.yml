@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Login to github
+      uses: docker/login-action@v1.12.0
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        passworkd: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Build and push Docker images
+      uses: docker/build-push-action@5.6
+      with:
+        context: .
+        file: ./dockerfile
+        tags: ${{ secrets.DOCKER_USERNAME }}/about:latest
+        push: true
