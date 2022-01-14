@@ -45,7 +45,6 @@ body {
     height: 85vh;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    color: var(--text-color);
 }
 .list::-webkit-scrollbar {
     display: none;
@@ -54,15 +53,18 @@ body {
 .item {
     font-size: 1.5rem;
     padding: 3rem;
-    color: var(--text-color);
 }
 
 .item a {
-    color: var(--text-color);
+    color: var(--title-color);
     text-decoration: none;
+    transition: 0.1s ease-in;
 }
 
 .item a:visited {
+    color: var(--title-color);
+}
+.item a:hover {
     color: var(--text-color);
 }
 
