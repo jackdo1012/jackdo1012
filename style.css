@@ -43,11 +43,16 @@ body {
     text-align: center;
     overflow-y: auto;
     height: 85vh;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scrollbar-width: 10px;
+    -ms-overflow-style: 10px;
 }
 .list::-webkit-scrollbar {
-    display: none;
+    width: 10px;
+    background-color: transparent;
+}
+.list::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: var(--title-color);
 }
 
 .item {
@@ -68,7 +73,6 @@ body {
     color: var(--text-color);
 }
 
-/* media query for ipad */
 @media screen and (max-width: 768px) {
     html {
         font-size: 14px;
@@ -83,10 +87,47 @@ body {
     .list {
         height: 80vh;
     }
+    .item {
+        padding: 2.5rem;
+    }
 }
 
-/* media query for iphone */
 @media screen and (max-width: 400px) {
+    html {
+        font-size: 12px;
+    }
+    .title {
+        font-size: 3rem;
+        height: 15vh;
+    }
+    .desc {
+        height: 10vh;
+    }
+    .list {
+        height: 75vh;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    html {
+        font-size: 14px;
+    }
+    .title {
+        font-size: 3.75rem;
+        height: 10vh;
+    }
+    .desc {
+        height: 10vh;
+    }
+    .list {
+        height: 80vh;
+    }
+    .item {
+        padding: 2.5rem;
+    }
+}
+
+@media screen and (max-height: 500px) {
     html {
         font-size: 12px;
     }
